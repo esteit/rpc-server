@@ -31,15 +31,12 @@ class RpcServer
 
     public function __construct(ProtocolInterface $protocol, EventDispatcherInterface $eventDispatcher = null)
     {
-        $this->eventDispatcher = $eventDispatcher;
+        $this->eventDispatcher = $eventDispatcher ? $eventDispatcher : new EventDispatcher();
         $this->protocol = $protocol;
     }
 
     public function getEventDispatcher()
     {
-        if (!$this->eventDispatcher) {
-            $this->eventDispatcher = new EventDispatcher();
-        }
         return $this->eventDispatcher;
     }
 
