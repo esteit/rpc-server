@@ -1,5 +1,5 @@
 {
-    "name": "esteit/rpc-server",
+    "name": "moriony/rpc-server",
     "description": "JSON+XML RPC Server based on Symfony components.",
     "type": "library",
     "keywords": ["rpc", "xml", "json", "server", "symfony"],
