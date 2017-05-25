@@ -117,7 +117,7 @@ class JsonRpcProtocol implements ProtocolInterface
                 'message' => $exception->getMessage(),
                 'data' => $exception->getData()
             ],
-            'id' => null
+            'id' => $exception->getRequestId()
         ]);
 
         return new JsonRpcResponse($body, 200, []);
